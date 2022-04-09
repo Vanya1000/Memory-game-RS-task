@@ -1,0 +1,201 @@
+@import "_nullstyle";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 20px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-family: "Poppins", sans-serif;
+	color: #ffffff;
+	background-color: #373b69;
+	font-weight: 400;
+	min-width: 320px;
+}
+
+.wrapper {
+	min-width: 768px;
+	min-height: 100%;
+	overflow: hidden; //Контент обрезается, без предоставления прокрутки. Для разных отступов.
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.header {
+	&__container {
+		background-color: #22254b;
+		padding: 15px;
+		text-align: center;
+	}
+	&__title {
+		margin-bottom: 20px;
+		}
+
+	&__result.winner {
+			color: rgb(51, 179, 51);
+		}
+}
+
+
+.main {
+
+		&__container {
+			padding: 5px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__game {
+			max-width: 680px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+		&__resetButton {
+			background-color: #F27922;
+			color: #ffffff;
+			padding: 20px 28px;
+			border-radius: 10px;
+			margin: 30px 0px;
+			transition: transform 0.5s;
+		}
+		&__resetButton:active {
+			transform: scale(0.95);
+			transition: transform 0.1s;
+		}
+		&__winner {
+			padding: 20px;
+			font-weight: 700;
+			font-size: 30px;
+			color: rgb(80, 192, 80);
+			opacity: 0;
+		}
+}
+
+
+
+.result {
+	margin-top: 40px;
+		&__title {
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		&__body {
+			display: flex;
+			flex-direction: column-reverse;;
+		}
+
+		&__item {
+			padding: 10px;
+			color: #cc7435;
+		}
+		&__item span{
+			color: #F27922;
+			font-weight: 900;
+			font-size: 25px;
+		}
+}
+
+
+
+.game {
+perspective: 1000px;
+
+		&__card {
+			position: relative;
+			cursor: pointer;
+			width: 120px;
+			height: 100px;
+			perspective: 700px;
+			transform: scale(1);
+			transform-style: preserve-3d;
+			transition: transform 0.5s;
+			
+		}
+
+		&__card:active {
+			transform: scale(0.95);
+			transition: transform 0.1s;
+		}
+
+		&__back-card {
+			transform: rotateY(360deg);
+			backface-visibility: hidden;
+		}
+
+		&__front-card {
+			
+		}
+
+
+		&__back-card, &__front-card {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background: #F27922;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 10px;
+
+	}
+}
+.game__card.flip {
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
+.footer {
+	&__container {
+		padding: 20px 0px;
+	}
+
+	&__body {
+		display: flex;
+		justify-content: center;
+		line-height: 50px;
+		padding: 0 20px;
+		gap: 200px;
+
+	}
+
+	&__copy {
+		display: flex;
+
+	}
+
+	&__item {
+		padding-right: 20px;
+	}
+
+	a {
+		transition: 0.3s;
+	
+	}
+	a:hover {
+		color: #868686;
+	}
+	img {
+		height: 30px;
+		filter: invert(100%) sepia(0%) saturate(638%) hue-rotate(7deg) brightness(100%) contrast(87%);
+			margin-top: 5px;
+		
+	}
+}
+
