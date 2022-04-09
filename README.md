@@ -1,2 +1,1 @@
-# vanya1000-JSFEPRESCHOOL
-Private repository for @vanya1000
+RS task stage 0 https://vanya1000.github.io/Memory-game_RS-task/
